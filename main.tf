@@ -123,7 +123,7 @@ resource "google_compute_instance" "foundry_vm" {
     while ! nc -z localhost 30000; do sleep 30; done
 
     # 5. Notify Discord
-    curl -H "Content-Type: application/json" -X POST -d "{\"content\": \" **Foundry VTT Online!** \n http://$${PUBLIC_IP}:30000\"}" https://discord.com/api/webhooks/1471834786367799420/kylSGsgV5zEBW5uG6GdIuPcW3H4340hb3QqE4_UBS761yZNqJR4HsYzyQDLU1t1bQO_o
+    curl -H "Content-Type: application/json" -X POST -d "{\"content\": \" **Foundry VTT Online!** \n http://$${PUBLIC_IP}:30000\"}" https://discord.com/api/webhooks/Discord_webhook_here
   EOT
 
   service_account {
